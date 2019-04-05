@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <style>
+    /*for mobile */
+    @media only screen and (max-width:499px) {
+      body{
+         font-style:Verdana;
+         background-color: #b0bf9e;
+          }
+    }
+   /*for tablets */
+    @media only screen and (min-width : 768px) and (max-width:1024px){
+      body{
+          font-style:Verdana;
+          }
+    }
+   /*For Desktops and laptops */
+    @media only screen and (min-width:1224px) {
+      body {
+          background-color: #a2eef2;
+           }
+    }
+    p::selection{
+          color:blue;
+          background:black;
+    }
+    </style>
+  </head>
+  <body>
+     <h1> Upload your dataset for free! </h1>
+     <a href="{% url 'knowledgecenter' %}">Knowledge Center</a><br><br>
+     <form name = "form" enctype = "multipart/form-data" action = "{% url "uploaddataset" %}" method = "POST">
+       {% csrf_token %}
+      Dataset Name : <input type="text" placeholder="Name" name="name">
+      File :<input type="file"placeholder="File" name="file">
+      <button type = "submit" value="Submit">
+      <strong>Submit</strong><br>
+     </form>
+  </body>
+</html>

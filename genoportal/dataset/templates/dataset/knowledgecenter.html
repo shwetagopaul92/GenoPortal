@@ -1,0 +1,76 @@
+{% load static %}
+<html>
+	<head>
+		<title>Knowledge Center</title>
+		<!--including meta tag required -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--bootstrap link -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- including a link to my css stylesheet -->
+	  <link rel="stylesheet" href="{% static 'users/style.css' %}"/>
+    <!-- allowing different styles for differently sized screens, like a laptop, mobile, desktop, tablets. -->
+    <style>
+      /*for mobile */
+        @media only screen and (max-width:499px) {
+          body{
+             font-style:Verdana;
+             background-color: #b0bf9e;
+              }
+        }
+       /*for tablets */
+        @media only screen and (min-width : 768px) and (max-width:1024px){
+          body{
+              font-style:Verdana;
+              }
+        }
+       /*For Desktops and laptops */
+        @media only screen and (min-width:1224px) {
+          body {
+              background-color: #a2eef2;
+               }
+        }
+        p::selection{
+              color:blue;
+            	background:black;
+        }
+    </style>
+	</head>
+	<body>
+		<div class="dnabg"><br><br>
+		<h2 style="text-align:center;font-weight:bold;color:#c11f37;font-size:40px"><br><br>Knowledge Center</div>
+		</div>
+		<!-- including information about this webpage -->
+		<!-- information retrieved from : reference : https://genome.ucsc.edu/FAQ/FAQformat.html#format1, -->
+		<!--http://www.internationalgenome.org/wiki/Analysis/vcf4.0/,https://useast.ensembl.org/info/website/upload/gff.html -->
+		<h2>Different file formats
+		<ol>
+			<li>BED :
+				<p style="font-size:60%;">A BED file (.bed) is a tab-delimited text file that defines a feature track.BED (Browser Extensible Data) format provides a flexible way to define the data lines that are displayed in an annotation track.
+					 BED lines have three required fields and nine additional optional fields. The number of fields per line must be consistent throughout any single set of data in an annotation track.
+					 The order of the optional fields is binding: lower-numbered fields must always be populated if higher-numbered fields are used.<p></li>
+			<li>VCF :
+				<p style="font-size:60%;">VCF is a text file format (most likely stored in a compressed manner). It contains meta-information lines, a header line,
+					and then data lines each containing information about a position in the genome.<p></li>
+			<li> GTF :
+				<p style="font-size:60%;">The Gene transfer format is a file format used to hold information about gene structure.
+					It is a tab-delimited text format based on the general feature format, but contains some additional conventions specific to gene information.</p></li>
+		</ol>
+    <!-- reference : https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-upload-s3.html -->
+    <ul>
+    	<li style="color:orange;font-weight:bold;font-size:30px"><a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-upload-s3.html">For upload to S3: Follow the link: Tutorial</a></p></li>
+    </ul>
+    <a href="{% url 'datasetdetails' %}">Click here for more Dataset Details</a><br>
+		<a href="{% url 'downloaddataset' %}">Click here to download datasets</a><br>
+    <footer>
+			<footer id="basecolor">
+			<address style="color:white;text-align:center;font-weight:bold;font-size:24px;">
+			<!-- links to different pages on the website -->
+			<a href="{% url 'products' %}">Products</a> |
+			<a href="{% url 'knowledgecenter' %}">Knowledge Center</a> |
+			<a href="{% url 'contactus' %}">Contact Us</a>
+			<br><br><br> <address style="color:white;text-align:center;font-weight:bold;font-size:24px">
+				We are located at: 49 Link Road, Boston MA 02115 </address>
+			<a href="{% url 'logout' %}">Logout</a>
+		</footer>
+	</body>
+</html>

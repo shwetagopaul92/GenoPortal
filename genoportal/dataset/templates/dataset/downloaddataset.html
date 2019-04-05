@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <!-- allowing different styles for differently sized screens, like a laptop, mobile, desktop, tablets. -->
+    <style>
+      /*for mobile */
+        @media only screen and (max-width:499px) {
+          body{
+             font-style:Verdana;
+             background-color: #b0bf9e;
+              }
+        }
+       /*for tablets */
+        @media only screen and (min-width : 768px) and (max-width:1024px){
+          body{
+              font-style:Verdana;
+              }
+        }
+       /*For Desktops and laptops */
+        @media only screen and (min-width:1224px) {
+          body {
+              background-color: #a2eef2;
+               }
+        }
+        p::selection{
+              color:blue;
+              background:black;
+        }
+    </style>
+  </head>
+  <body>
+    <a href="{% url 'knowledgecenter' %}">Knowledge Center</a>
+    <a href="{% url 'logout' %}">Logout</a><br><br>
+    <form name="view" action= "{% url "viewdataset" %}" method = "POST">
+      {% csrf_token %}
+      Dataset Name : <input type="text" placeholder="Name" name="name">
+      <button type="submit" value="Submit">Download Dataset<br>
+    </form>
+  </body>
+</html>

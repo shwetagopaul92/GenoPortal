@@ -1,0 +1,8 @@
+{% extends "users/base.html" %}
+{% block body %}
+<h1>Welcome {{ name }} Your form with {{ querytype }} querytype has been submitted successfully!
+    Someone from our team will get back to you soon! Thank you! </h1>
+<a href="{% url 'logout' %}">Logout</a></li>
+<p>Go back to explore more !<a href="{% url 'products' %}">Click here</a></p>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}

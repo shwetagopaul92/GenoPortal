@@ -1,0 +1,61 @@
+{% load static %}
+<html>
+	<head>
+		<title>GenoPortal</title>
+		<!-- include link to css stylesheet -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'users/style.css' %}"/>
+		<!-- allowing different styles for differently sized screens, like a laptop, mobile, desktop, tablets. -->
+		<style>
+			/*for mobile */
+			@media only screen and (max-width:499px) {
+				body{
+								font-style:Verdana;
+								background-color: #b0bf9e;
+						}
+			}
+			/*for tablets */
+			@media only screen and (min-width : 768px) and (max-width:1024px){
+				body{
+								font-style:Verdana;
+						}
+			}
+			/*For Desktops and laptops */
+			@media only screen and (min-width:1224px) {
+				body {
+								background-color: #a2eef2;
+						 }
+			}
+			p::selection{
+								color:blue;
+								background:black;
+			}
+			</style>
+	</head>
+	<body>
+		<!-- defined .bg in mystyle1.css, calling the class here to include background image filling 60% of the page -->
+		<div class="binarydnabg">
+		<br><br>
+		<!-- Just a greeting to folks visiting this website with h1 defined with more styling in the stylesheet -->
+		<h1><br><br> Hello World! </h1>
+		</div>
+		<!-- including information about webpage -->
+		<div class="space"></div><p id="information">Welcome to GenoPortal!
+		<br><br>GenoPortal is a leading bioinformatics company, providing extremely efficient and immediate access to public genomic data, cloud computing solutions, and scientific support.
+		Use our Portal to get a flavor of what's in store to get the best support for your genomics research!</p>
+    <br><br> We offer a free 3 day trial for you to get a flavour of our resources. The trial includes access to limited number of genomic datasets and solutions.
+      Get a paid membership for just $50 per month to make the most of our platform!
+    <a href="{% url 'registerview' %}">REGISTER here for a free 3 day trial</a>to get started!</p>
+    <p>If you have already registered with us before,<a href="{% url 'index' %}">LOGIN</a>to get started!</p>
+    <!-- including a footer section to display links to different pages, contact address -->
+		<footer>
+		<footer id="basecolor">
+		<address style="color:white;text-align:center;font-weight:bold;font-size:24px;">
+		<!-- links to different pages on the website -->
+		<a href="{% url 'products' %}">Products</a> |
+		<a href="{% url 'knowledgecenter' %}">Knowledge Center</a> |
+		<a href="{% url 'contactus' %}">Contact Us</a>
+		<br><br><br> <address style="color:white;text-align:center;font-weight:bold;font-size:24px">We are located at: 49 Link Road, Boston MA 02115</address>
+		</footer>
+	</body>
+</html>

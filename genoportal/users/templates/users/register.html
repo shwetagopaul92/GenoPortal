@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GenoPortal Register</title>
+		<style>
+			/*for mobile */
+			@media only screen and (max-width:499px) {
+				body{
+								font-style:Verdana;
+								background-color: #b0bf9e;
+						}
+			}
+			/*for tablets */
+			@media only screen and (min-width : 768px) and (max-width:1024px){
+				body{
+								font-style:Verdana;
+						}
+			}
+			/*For Desktops and laptops */
+			@media only screen and (min-width:1224px) {
+				body {
+								background-color: #a2eef2;
+						 }
+			}
+			p::selection{
+								color:blue;
+								background:black;
+			}
+			</style>
+		<!-- include link to css ylesheet -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'users/style.css' %}"/>
+	</head>
+	<body>
+    <!-- defined .bg in mystyle1.css, calling the class here to include background image filling 60% of the page -->
+    <div class="binarydnabg">
+    <h1><br><br>Register!</h1>
+    </div>
+    <div class="space"></div>
+    <h1>Register to use our platform!</h1>
+    <form action="{% url 'register' %}" method="post">
+      {% csrf_token %}
+      First Name : <input name="first_name" type="text"/><br><br>
+      Last Name : <input name="last_name" type="text"/><br><br>
+      Email-address: <input name="email" type="text"/><br><br>
+      Username : <input name="username" type="text"/><br><br>
+      Password : <input name="password" type="password"/><br><br>
+      Register <input type="submit" value="Register"/>
+    </form>
+  </body>
+</html>

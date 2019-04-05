@@ -1,0 +1,112 @@
+{% load static %}
+<html>
+	<head>
+		<title>Products</title>
+		<!--including meta tag required -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--bootstrap link -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <!-- including a link to my css stylesheet -->
+    <link rel="stylesheet" href="{% static 'users/style.css' %}"/>
+		<!-- including a table -->
+		<style>
+		/*for mobile */
+		@media only screen and (max-width:499px) {
+					body{
+						 font-style:Verdana;
+						 background-color: #b0bf9e;
+						}
+	  }
+		/*for tablets */
+		@media only screen and (min-width : 768px) and (max-width:1024px){
+					body{
+							font-style:Verdana;
+							}
+		}
+		/*For Desktops and laptops */
+		@media only screen and (min-width:1224px) {
+					body {
+							background-color: #a2eef2;
+							 }
+		}
+		p::selection{
+							color:blue;
+							background:black;
+		}
+    table {
+              border: 2px solid black;
+              border-collapse: collapse;
+              width: 50%;
+    }
+    th, td {
+              border: 1px solid black;
+              padding: 5px;
+              text-align: center;
+    }
+    th {
+              background-color: #afbcd1;
+    }
+    </style>
+	</head>
+	<body>
+		<!-- defined .bg in mystyle2.css, calling the class here to include background image filling 60% of the page -->
+		<div class="dnabg">
+		<br><br>
+		<h2 style="text-align:center;font-weight:bold;color:#c11f37;font-size:40px"><br><br>Products</h2>
+    </div>
+    <!-- including an ordered list with a link to different sections on this webpage -->
+		<ol class="ollistype">
+			<li><a href="#datasets"> Datasets Available</a></li>
+			<li><a href="#cloudresources"> Cloud Computing Resources</a></li>
+			<li><a href="#support"> Scientific Support</a></li>
+		</ol>
+		</div>
+		<!-- including information about this webpage in a table -->
+		<h2 id="datasets" style="text-align:left;font-weight:bold;color:#1B4F72;font-size:24px"> Datasets available:</h2><br>
+		<table align="center">
+			<tr>
+				<th> Dataset Name </th>
+				<th> Formats </th>
+				<th> Available for Download </th>
+			</tr>
+			<tr>
+				<th> Roadmap Digital Genomics Footprint </th>
+				<th> BED format (.bed) </th>
+				<th> Yes </th>
+			</tr>
+			<tr>
+				<th> Genotype Tissue Expression (eQTL) </th>
+				<th> Text (.txt) </th>
+				<th> Yes </th>
+			</tr>
+			<tr>
+				<th> Transcription Factor Binding Sites </th>
+				<th> Browser Extensible Data Format (BED, .bed) </th>
+				<th> Available Soon </th>
+			</tr>
+		</table>
+		<br>
+		<a href="{% url 'dataset' %}">Available Datasets</a><br>
+		<a href="{% url 'uploadform' %}">Upload Datasets</a>
+		<!-- including information about this webpage -->
+		<h2 id="cloudresources" style="text-align:left;font-weight:bold;color:#1B4F72;font-size:24px">GenoPortal allows users to access our cloud resources most efficiently at less cost. Users can now:</h2>
+		<!-- including an unordered list -->
+		<ul class="ullisttype">
+			<li>Upload data to S3 buckets</li>
+		</ul>
+    <br><br>
+    <h2 id="support" style="text-align:left;font-weight:bold;color:#1B4F72;font-size:24px"> We are always eager and happy to provide bioinformatics solutions, genomic data anlaysis, troubleshoot cloud related problems for you. Please feel free to reach out to us by writing a message in the Contact Us page ! </h2>
+    <footer>
+			<footer id="basecolor">
+			<!-- links to different pages on the website -->
+			<address style="color:white;text-align:center;font-weight:bold;font-size:24px;">
+			<!-- links to different pages on the website -->
+			<a href="{% url 'products' %}">Products</a> |
+			<a href="{% url 'knowledgecenter' %}">Knowledge Center</a> |
+			<a href="{% url 'contactus' %}">Contact Us</a>
+			<br><br><br> <address style="color:white;text-align:center;font-weight:bold;font-size:24px">
+				We are located at: 49 Link Road, Boston MA 02115 </address>
+			<a href="{% url 'logout' %}">Logout</a>
+		</footer>
+	</body>
+</html>

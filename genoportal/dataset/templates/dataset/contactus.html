@@ -1,0 +1,89 @@
+{% load static %}
+<html>
+	<head>
+		<title>Contact</title>
+		<!--including meta tag required -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--bootstrap link -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <!-- including a link to my css stylesheet -->
+    <link rel="stylesheet" href="{% static 'users/style.css' %}"/>
+    <style>
+        .row > div {
+                padding: 10px;
+                background-color: #fcaf88;
+                border: 2px solid black;
+
+            }
+        input[type=text]:focus{
+            	  width:300px;
+
+            }
+				<!-- allowing different styles for differently sized screens, like a laptop, mobile, desktop, tablets. -->
+	 		  /*for mobile */
+	 		  @media only screen and (max-width:499px) {
+	 		       body{
+	 		             font-style:Verdana;
+	 		             background-color: #b0bf9e;
+	 		            }
+	 		  }
+	 		  /*for tablets */
+	 		  @media only screen and (min-width : 768px) and (max-width:1024px){
+	 		       body{
+	 		             font-style:Verdana;
+	 		           }
+	 		  }
+	 		  /*For Desktops and laptops */
+	 		  @media only screen and (min-width:1224px) {
+	 		       body {
+	 		              background-color: #a2eef2;
+	 		            }
+	 		  }
+	 		  p::selection{
+	 		              color:blue;
+	 		             	background:black;
+	 		  }
+    </style>
+	</head>
+	<body>
+		<div class="binarydnabg", "centered">
+		<br><br>
+		<h1><br><br>Contact Us</h1>
+		</div>
+		<p id= "information">	Got queries ? Let's get in touch!<br><br></p>
+		<form action="{% url 'contactform' %}" method="post">
+		  {% csrf_token %}
+		<div class="formcenterpage">
+			Name: <input name="name" type="text" placeholder="Name" class="formstyleall" style="text-align:center"><br><br>
+			Gender: <input name="gender" type="text" placeholder="Gender" class="formstyleall" style="text-align:center"><br><br>
+      Email-address: <input name="emailaddress" type="text" placeholder="Email-address" class="formstyleall" style="text-align:center"><br><br>
+      Query Type: <input name="querytype" type="text" placeholder="Query Type" style="text-align:center" class="formstyleallinput"><br><br>
+    	Message: <input name="message" type="text" class="formstylemessageinput"><br><br><br>
+     	<button type="submit" value="Submit" style="height:40px; width:100px;">Submit</button>
+     	<button type="reset" value="Reset" style="height:40px; width:100px">Reset</button>
+    </div>
+		</form><br><br><br>
+    <footer>
+		<footer id="basecolor">
+		<address style="color:white;text-align:center;font-weight:bold;font-size:24px">
+		<!-- links to different pages on the website -->
+		<a href="{% url 'products' %}">Products</a> |
+		<a href="{% url 'knowledgecenter' %}">Knowledge Center</a> |
+		<a href="{% url 'contactus' %}">Contact Us</a>
+		<br><br><br><address style="color:white;text-align:center;font-weight:bold;font-size:24px">
+		We are located at: 49 Link Road, Boston MA 02115</address>
+		<a href="{% url 'logout' %}">Logout</a>
+		<!-- including a boostrap columns with grid layout -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6">
+          Come Join Us at our Annual Party on Dec 1, 2018
+        </div>
+        <div class="col-lg-6 col-sm-6">
+          Cambridge Hotel, Cambridge, MA 02245
+        </div>
+      </div>
+		</div>
+		</footer>
+	</body>
+</html>

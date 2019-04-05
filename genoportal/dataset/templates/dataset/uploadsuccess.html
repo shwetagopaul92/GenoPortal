@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+    /*for mobile */
+    @media only screen and (max-width:499px) {
+      body{
+       font-style:Verdana;
+       background-color: #b0bf9e;
+      }
+    }
+    /*for tablets */
+    @media only screen and (min-width : 768px) and (max-width:1024px){
+      body{
+        font-style:Verdana;
+      }
+    }
+    /*For Desktops and laptops */
+    @media only screen and (min-width:1224px) {
+    body {
+        background-color: #a2eef2;
+    }
+    }
+    p::selection{
+        color:blue;
+        background:black;
+    }
+   </style>
+  </head>
+  <body>
+      {% if upload %}
+         <strong>Your dataset was uploaded successfully!</strong>
+      {% endif %}
+      {% if not upload %}
+         <strong>Sorry, your dataset was not uploaded! </strong>
+         <a href="{% url 'uploadform' %}">Go back to upload again!</a>
+      {% endif %}
+      <a href="{% url 'knowledgecenter' %}">Knowledge Center</a>
+   </body>
+</html>

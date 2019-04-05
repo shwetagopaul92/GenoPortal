@@ -1,0 +1,104 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0; }
+
+.space {
+  margin-top: 50px; }
+
+a:link {
+  color: #820509;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold; }
+
+a:visited {
+  color: #820509;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold; }
+
+a:hover {
+  color: #010f42;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold; }
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold; }
+
+.binarydnabg {
+  background-image: url("image1.jpg");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.dnabg {
+  background-image: url("image2.jpg");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+.formcenterpage {
+  margin: 0 auto;
+  width: 400px; }
+
+.formstyleallinputs {
+  font-size: 20px;
+  height: 15px;
+  width: 200px; }
+
+.formstylemessageinput {
+  font-size: 30px;
+  height: 80px;
+  width: 600px;
+  background-color: #afbcd1; }
+
+h1 {
+  font-size: 40px;
+  color: white;
+  text-align: center; }
+
+#information {
+  font-size: 28px;
+  text-align: center;
+  color: #1B4F72;
+  font-weight: bold; }
+
+#basecolor {
+  background-color: #1B4F72;
+  height: 60%;
+  background-size: cover;
+  background-position: bottom;
+  position: static;
+  bottom: 0;
+  width: 100%; }
+
+.ullisttype {
+  list-style: square;
+  font-size: 24px;
+  color: #820509;
+  font-weight: bold; }
+
+.ollistype {
+  font-size: 24px;
+  color: #820509;
+  font-weight: bold; }
