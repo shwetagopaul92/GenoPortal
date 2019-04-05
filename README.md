@@ -15,3 +15,11 @@ I have also created a api view for a GET request,  and accessing the app at /api
 - The dataset/datasetfiles has the .bed and .txt files required for this project. 
 
 
+To use this App, 
+
+1. Clone the github repository
+2. cd genoportal/
+3. python3 manage.py runserver
+
+
+
