@@ -1,8 +1,15 @@
-# final-project
+# GenoPortal
 
-1. For the final project I have created a web application called "GenoPortal" using Django and sqlite. The app meets the requirements - using Python and database backend sqlite. The application is mobile responsive.
-2. In this app, users can register for a free trial. Once registered, they can log in to see what the platform has. The GenoPortal platform offers genomic datasets that can be downloaded for free. I have uploaded some datasets already to Django Admin interface. Users can also upload their own datasets to the app using a form and start using them. There is a products page, knowledge center page (scientific support), dataset details page allowing the user to understand how to use the platform. A page with the dataset names is given , allowing the users to search for the datasets they like, grab the name and download them if they wish to. I have also created a api view for a GET request,  and accessing the app at /api allows users to view the datasets details. There is a contact form allowing users to post any queries to the support team, and once the form is submitted a message showing confirmation is shown. The details of the form are saved in the database. To integrate with S3, there is a link leading to Amazon S3 upload tutorial. 
+An illustration of a Django App
+
+The app uses Python, sqlite, 
+
+Details : 
+
+I have created a web application called "GenoPortal" using Django and sqlite. The app meets the requirements - using Python and database backend sqlite. The application is mobile responsive.
+
+2. In this app, users can register for a free trial. Once registered, they can log in to see what the platform has to offer. The GenoPortal platform offers genomic datasets that can be downloaded for free. I have uploaded some datasets already to Django Admin interface. Users can also upload their own datasets to the app using a form and start using them. There is a products page, knowledge center page (scientific support), dataset details page allowing the user to understand how to use the platform. A page with the dataset names is given , allowing the users to search for the datasets they like, grab the name and download them if they wish to. I have also created a api view for a GET request,  and accessing the app at /api allows users to view the datasets details. There is a contact form allowing users to post any queries to the support team, and once the form is submitted a message showing confirmation is shown. The details of the form are saved in the database. To integrate with S3, there is a link leading to Amazon S3 upload tutorial. 
+
 3. The dataset/datasetfiles has the .bed and .txt files required for this project. 
-Note :I had 50 files in the datasetfiles/ , I am unable to push it to github, for example sake I have left 2 .bed files in the folder to show how the app works. 
 
-The dataset files took some time to get pushed to github, I had around 49 files initially, but was unable to add them to git. I removed all the files and have left just 2 of them for illustration purposes. I could send the project by email if required with all the files or share or Google Drive. 
+
